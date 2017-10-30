@@ -2,7 +2,6 @@ require "pry"
 
 def count_elements(array)
   # code goes here
-  array = array.group_by {|x| x}
-  binding.pry
+  return Hash[array.group_by {|x| x}.collect {|name,count| name,name.count}]
+
 end
- 
